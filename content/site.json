@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Sajan Bhandari — Programmer",
+    "description": "Portfolio of Sajan Bhandari, a programmer building things for the web."
+  },
+  "name": "Sajan Bhandari",
+  "role": "Programmer",
+  "tagline": "I build clean, fast and thoughtful software for the web.",
+  "availability": "Open to new projects",
+  "location": "Nepal",
+  "email": "hello@sajanbhandari.com.np",
+  "avatar": "",
+  "socials": [
+    { "label": "Instagram", "url": "https://instagram.com/sajan_bhandari_" },
+    { "label": "Facebook", "url": "https://facebook.com/sajan.dwxs" }
+  ],
+  "about": {
+    "heading": "A programmer who cares about the details.",
+    "paragraphs": [
+      "I'm Sajan, a programmer based in Nepal. I enjoy turning ideas into working products, from the first line of code to the last pixel.",
+      "Edit this text from the admin panel at /admin to tell your own story."
+    ]
+  },
+  "skills": [
+    { "group": "Frontend", "items": ["HTML", "CSS", "JavaScript"] },
+    { "group": "Backend", "items": ["Node.js", "APIs", "Databases"] },
+    { "group": "Tools", "items": ["Git", "GitHub", "Linux"] }
+  ],
+  "projects": [
+    {
+      "title": "Your first project",
+      "description": "A short description of what it does and what you built. Replace this from the admin panel.",
+      "tags": ["JavaScript", "Web"],
+      "url": "https://github.com/sajanbhandari",
+      "image": ""
+    }
+  ],
+  "experience": [
+    {
+      "role": "Programmer",
+      "org": "Independent",
+      "period": "2023 — Present",
+      "summary": "Building websites and software for clients and personal projects."
+    }
+  ]
+}

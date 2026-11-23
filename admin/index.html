@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Portfolio Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <!-- Login -->
+  <main id="login" class="login">
+    <h1>Portfolio admin</h1>
+    <p class="hint">Edit your site content. Changes are saved straight to your GitHub repository and go live in about a minute.</p>
+    <form id="login-form">
+      <label>Repository <input id="repo" required placeholder="owner/repo" value="sajanbhandari/sajanbhandari"></label>
+      <label>Branch <input id="branch" required value="main"></label>
+      <label>GitHub token
+        <input id="token" type="password" required autocomplete="off" placeholder="github_pat_…">
+      </label>
+      <p class="hint">Create a <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>
+        limited to this repository with <b>Contents: Read and write</b>. It is stored only in this browser.</p>
+      <button class="primary" type="submit">Sign in</button>
+      <p id="login-error" class="error" role="alert"></p>
+    </form>
+  </main>
+
+  <!-- Editor -->
+  <div id="app" hidden>
+    <header class="bar">
+      <strong>Portfolio admin</strong>
+      <span id="status" role="status"></span>
+      <a href="../" target="_blank" rel="noopener">View site ↗</a>
+      <button id="logout" type="button">Sign out</button>
+      <button id="save" class="primary" type="button">Save &amp; publish</button>
+    </header>
+    <main id="form" class="form"></main>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
