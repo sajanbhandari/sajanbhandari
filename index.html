@@ -3,74 +3,215 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sajan Bhandari — Programmer</title>
+  <title>Sajan Bhandari, programmer in Nepal</title>
   <meta name="description" content="Portfolio of Sajan Bhandari, a programmer building things for the web.">
-  <meta name="theme-color" content="#14110f">
-  <link rel="icon" href="assets/favicon.ico">
+  <meta name="theme-color" content="#0F3A21">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sajan Bhandari, programmer in Nepal">
+  <meta property="og:description" content="Portfolio of Sajan Bhandari, a programmer building things for the web.">
+  <meta property="og:url" content="https://sajanbhandari.com.np/">
+  <meta property="og:image" content="https://sajanbhandari.com.np/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sajanbhandari.com.np/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sajan Bhandari","jobTitle":"Programmer","url":"https://sajanbhandari.com.np","homeLocation":{"@type":"Place","name":"Nepal"}}</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script>try{var t=localStorage.getItem('theme');if(!t&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <header class="nav" id="nav">
-    <a class="brand" href="#top" id="brand">SB</a>
-    <nav aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="theme" id="theme" aria-label="Toggle colour theme" type="button"></button>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark" id="brand">SB</span><span class="brand-name" id="brand-name"></span></a>
+      <nav aria-label="Primary">
+        <a href="#about">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Career</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <span class="clock" id="clock" aria-hidden="true">0&prime;</span>
+      <button class="mode" id="mode" type="button" aria-pressed="false">Night match</button>
+    </div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <p class="pill" id="availability"><span class="dot"></span><span></span></p>
-      <h1 id="name">&nbsp;</h1>
-      <p class="role" id="role"></p>
-      <p class="tagline" id="tagline"></p>
-      <div class="cta">
-        <a class="btn primary" href="#work">See my work</a>
-        <a class="btn" href="#contact">Get in touch</a>
+  <main id="main">
+    <section class="hero-band" id="top">
+      <div class="wrap hero">
+        <div class="hero-main">
+          <h1 id="name"></h1>
+          <p class="lead" id="tagline"></p>
+          <div class="cta">
+            <a class="btn btn-primary" id="cta-work" href="#work">See the work</a>
+            <a class="btn-text" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="hero-lines" viewBox="0 0 500 500" focusable="false">
+            <path class="mk" pathLength="1" d="M250 30a220 220 0 1 1 0 440a220 220 0 1 1 0-440"/>
+            <path class="mk" pathLength="1" d="M250 0V500"/>
+            <circle class="spot" cx="250" cy="250" r="4"/>
+          </svg>
+          <svg class="jersey" id="jersey" viewBox="0 0 400 440" focusable="false">
+            <path d="M118 22 58 50 8 142l62 30 22-30V420h216V142l22 30 62-30-50-92-60-28c-18 34-52 52-82 52s-64-18-82-52Z" fill="#C4122F" stroke="#F7F9F5" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M118 22c18 34 52 52 82 52s64-18 82-52" fill="none" stroke="#F7F9F5" stroke-width="12" stroke-linecap="round"/>
+            <path d="M24 118l56 27M376 118l-56 27" stroke="#F7F9F5" stroke-width="10" stroke-linecap="round"/>
+            <text id="jersey-name" x="200" y="132" text-anchor="middle" fill="#F7F9F5" font-size="32" font-weight="800" style="font-stretch:62%;letter-spacing:.06em"></text>
+            <text id="jersey-number" x="200" y="330" text-anchor="middle" fill="#F7F9F5" font-size="190" font-weight="800" style="font-stretch:62%"></text>
+          </svg>
+        </div>
+        <dl class="facts" id="facts">
+          <div class="fact" id="fact-role"><dt>Position</dt><dd id="role"></dd></div>
+          <div class="fact" id="fact-location"><dt>Based in</dt><dd id="location"></dd></div>
+          <div class="fact" id="fact-time"><dt>Local time</dt><dd id="localtime"></dd></div>
+          <div class="fact" id="fact-availability"><dt>Availability</dt><dd id="availability"></dd></div>
+        </dl>
       </div>
-      <figure class="avatar" id="avatar" hidden></figure>
     </section>
 
-    <section id="about" class="block reveal">
-      <h2 class="eyebrow">About</h2>
-      <div class="about">
-        <p class="lead" id="about-heading"></p>
-        <div id="about-body"></div>
+    <section id="about" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">Player profile</h2>
+        <div class="section-body about-grid" id="about-grid">
+          <div>
+            <p class="about-lead" id="about-heading"></p>
+            <div class="prose" id="about-body"></div>
+          </div>
+          <figure class="portrait" id="avatar" hidden></figure>
+        </div>
       </div>
-      <div class="skills" id="skills"></div>
     </section>
 
-    <section id="work" class="block reveal">
-      <h2 class="eyebrow">Selected work</h2>
-      <div class="projects" id="projects"></div>
+    <section id="services" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">What I do</h2>
+        <ul class="services section-body" id="services-list"></ul>
+      </div>
     </section>
 
-    <section id="experience" class="block reveal">
-      <h2 class="eyebrow">Experience</h2>
-      <ol class="timeline" id="experience-list"></ol>
+    <section id="skills" class="section teamsheet">
+      <div class="wrap">
+        <header class="teamsheet-head">
+          <div>
+            <h2 class="section-title">Team sheet</h2>
+            <p class="small" id="ts-note">Skills grouped into lines. The first group leads the attack.</p>
+          </div>
+          <p class="formation" id="formation" hidden><span class="small">Formation</span><strong id="formation-figure"></strong></p>
+        </header>
+        <div class="teamsheet-grid">
+          <div class="pitch" id="pitch" aria-hidden="true">
+            <svg class="markings markings--h" viewBox="-2 -2 109 72" preserveAspectRatio="none" focusable="false">
+              <path class="mk" pathLength="1" d="M0 0H105V68H0Z"/>
+              <path class="mk" pathLength="1" d="M52.5 0V68"/>
+              <path class="mk" pathLength="1" d="M52.5 24.85a9.15 9.15 0 1 1 0 18.3a9.15 9.15 0 1 1 0-18.3"/>
+              <path class="mk" pathLength="1" d="M0 13.84H16.5V54.16H0"/>
+              <path class="mk" pathLength="1" d="M105 13.84H88.5V54.16H105"/>
+              <path class="mk" pathLength="1" d="M0 24.84H5.5V43.16H0"/>
+              <path class="mk" pathLength="1" d="M105 24.84H99.5V43.16H105"/>
+              <path class="mk" pathLength="1" d="M16.5 26.69A9.15 9.15 0 0 1 16.5 41.31"/>
+              <path class="mk" pathLength="1" d="M88.5 41.31A9.15 9.15 0 0 1 88.5 26.69"/>
+              <circle class="spot" cx="52.5" cy="34" r=".4"/><circle class="spot" cx="11" cy="34" r=".4"/><circle class="spot" cx="94" cy="34" r=".4"/>
+            </svg>
+            <svg class="markings markings--v" viewBox="-2 -2 72 109" preserveAspectRatio="none" focusable="false">
+              <path class="mk" pathLength="1" d="M0 0H68V105H0Z"/>
+              <path class="mk" pathLength="1" d="M0 52.5H68"/>
+              <path class="mk" pathLength="1" d="M24.85 52.5a9.15 9.15 0 1 0 18.3 0a9.15 9.15 0 1 0-18.3 0"/>
+              <path class="mk" pathLength="1" d="M13.84 0V16.5H54.16V0"/>
+              <path class="mk" pathLength="1" d="M13.84 105V88.5H54.16V105"/>
+              <path class="mk" pathLength="1" d="M24.84 0V5.5H43.16V0"/>
+              <path class="mk" pathLength="1" d="M24.84 105V99.5H43.16V105"/>
+              <path class="mk" pathLength="1" d="M26.69 16.5A9.15 9.15 0 0 0 41.31 16.5"/>
+              <path class="mk" pathLength="1" d="M26.69 88.5A9.15 9.15 0 0 1 41.31 88.5"/>
+              <circle class="spot" cx="34" cy="52.5" r=".4"/><circle class="spot" cx="34" cy="11" r=".4"/><circle class="spot" cx="34" cy="94" r=".4"/>
+            </svg>
+            <div class="formation-lines" id="formation-lines"></div>
+          </div>
+          <div class="squad" id="squad"></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="block contact reveal">
-      <h2 class="eyebrow">Contact</h2>
-      <p class="lead">Have a project in mind? Let's talk.</p>
-      <a class="mail" id="mail" href="#"></a>
-      <ul class="socials" id="socials"></ul>
+    <section id="work" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">Match reports</h2>
+        <ul class="reports section-body" id="projects"></ul>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">Game plan</h2>
+        <ol class="plan section-body" id="plan-list"></ol>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">Career record</h2>
+        <div class="section-body table-wrap">
+          <table class="record">
+            <caption class="sr-only">Career record</caption>
+            <thead><tr><th scope="col">Season</th><th scope="col">Role</th><th scope="col">Team</th><th scope="col">Summary</th></tr></thead>
+            <tbody id="experience-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="quotes" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">Kind words</h2>
+        <div class="quotes section-body" id="quotes-list"></div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">Club news</h2>
+        <ul class="news section-body" id="news-list"></ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap section-grid">
+        <h2 class="section-title">Get in touch</h2>
+        <div class="section-body">
+          <p id="mail-intro">Email is the quickest way to reach me.</p>
+          <a class="mail" id="mail" href="#"></a>
+          <p><a class="btn-text" id="cv" href="#" hidden>Download CV</a></p>
+          <form class="form" id="form" novalidate>
+            <p class="small">Or write it here. This opens your email app with the message ready to send.</p>
+            <label>Your name<input id="f-name" name="name" autocomplete="name" required></label>
+            <label>Your email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+            <label class="wide">Message<textarea id="f-msg" name="message" rows="5" required></textarea></label>
+            <button class="btn btn-send" type="submit">Prepare email</button>
+            <p class="form-note" id="form-note" role="status"></p>
+          </form>
+          <div id="elsewhere">
+            <p class="small">Elsewhere</p>
+            <ul class="socials" id="socials"></ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="foot">
-    <span id="copy"></span>
-    <a href="admin/">Admin</a>
+  <footer class="site-foot">
+    <div class="wrap foot-inner">
+      <span><span class="ft">Full time.</span> <span id="copy"></span></span>
+      <a href="admin/">Edit site</a>
+    </div>
   </footer>
 
-  <noscript><p class="noscript">Please enable JavaScript to view this portfolio.</p></noscript>
+  <noscript><p class="noscript">This page needs JavaScript to load its content.</p></noscript>
   <script src="js/main.js"></script>
 </body>
 </html>

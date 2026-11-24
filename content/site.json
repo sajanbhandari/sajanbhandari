@@ -1,46 +1,120 @@
 {
   "meta": {
-    "title": "Sajan Bhandari — Programmer",
+    "title": "Sajan Bhandari, programmer in Nepal",
     "description": "Portfolio of Sajan Bhandari, a programmer building things for the web."
   },
   "name": "Sajan Bhandari",
   "role": "Programmer",
-  "tagline": "I build clean, fast and thoughtful software for the web.",
+  "tagline": "I build fast, dependable software for the web.",
   "availability": "Open to new projects",
   "location": "Nepal",
+  "timezone": "Asia/Kathmandu",
+  "number": "10",
   "email": "hello@sajanbhandari.com.np",
+  "cv": "",
   "avatar": "",
   "socials": [
-    { "label": "Instagram", "url": "https://instagram.com/sajan_bhandari_" },
-    { "label": "Facebook", "url": "https://facebook.com/sajan.dwxs" }
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/sajan_bhandari_"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://facebook.com/sajan.dwxs"
+    }
   ],
   "about": {
-    "heading": "A programmer who cares about the details.",
+    "heading": "Programmer based in Nepal, building for the web.",
     "paragraphs": [
       "I'm Sajan, a programmer based in Nepal. I enjoy turning ideas into working products, from the first line of code to the last pixel.",
-      "Edit this text from the admin panel at /admin to tell your own story."
+      "Placeholder: say what you are working on now, the problems you like solving, and how to work with you. Edit this at /admin."
     ]
   },
+  "services": [
+    {
+      "title": "Websites and web apps",
+      "description": "Placeholder: describe what you build for clients and what they get."
+    },
+    {
+      "title": "Frontend engineering",
+      "description": "Placeholder: interfaces that are fast, accessible and easy to maintain."
+    },
+    {
+      "title": "Backend and APIs",
+      "description": "Placeholder: services, databases and integrations that hold up under load."
+    }
+  ],
   "skills": [
-    { "group": "Frontend", "items": ["HTML", "CSS", "JavaScript"] },
-    { "group": "Backend", "items": ["Node.js", "APIs", "Databases"] },
-    { "group": "Tools", "items": ["Git", "GitHub", "Linux"] }
+    {
+      "group": "Frontend",
+      "items": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "group": "Backend",
+      "items": [
+        "Node.js",
+        "APIs",
+        "Databases"
+      ]
+    },
+    {
+      "group": "Tools",
+      "items": [
+        "Git",
+        "GitHub",
+        "Linux"
+      ]
+    }
   ],
   "projects": [
     {
-      "title": "Your first project",
-      "description": "A short description of what it does and what you built. Replace this from the admin panel.",
-      "tags": ["JavaScript", "Web"],
+      "title": "Project title (placeholder)",
+      "description": "One or two sentences on what it does and what you built. Replace this at /admin.",
+      "tags": [
+        "JavaScript",
+        "Web"
+      ],
       "url": "https://github.com/sajanbhandari",
       "image": ""
+    }
+  ],
+  "process": [
+    {
+      "title": "Brief",
+      "description": "Placeholder: how you learn what the project needs."
+    },
+    {
+      "title": "Build",
+      "description": "Placeholder: how you design and develop it, with regular check-ins."
+    },
+    {
+      "title": "Review",
+      "description": "Placeholder: testing and feedback before anything goes live."
+    },
+    {
+      "title": "Ship",
+      "description": "Placeholder: launch, hand-over and ongoing support."
     }
   ],
   "experience": [
     {
       "role": "Programmer",
       "org": "Independent",
-      "period": "2023 — Present",
+      "period": "2023–present",
       "summary": "Building websites and software for clients and personal projects."
+    }
+  ],
+  "testimonials": [],
+  "news": [
+    {
+      "date": "2026-11",
+      "title": "Portfolio relaunched",
+      "summary": "A new design, plus a built-in editor so the content can be updated in minutes.",
+      "url": ""
     }
   ]
 }
